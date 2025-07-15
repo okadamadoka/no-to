@@ -1,0 +1,92 @@
+body{
+    background-color: #fffff5;
+    color: #707070;
+}
+h2{
+    border-bottom: solid #f5ff6f;
+    margin-bottom: 2%;
+    white-space: nowrap;
+}
+h3{
+    border-bottom: solid #f5ff6f;
+    margin-bottom: 1%;    
+    white-space: nowrap;
+}
+h4{
+    margin: 3px;
+}
+.mein{
+    display: flex;
+    justify-content: space-around;
+}
+p{
+    margin: 2%;
+}
+.js{
+    width: 50%;
+}
+.ko-do{
+    width: 40%;
+}
+/*---色---*/
+
+.p{
+    color: #9968b4;
+}
+.r{
+    color: #d35050;
+}
+.o{
+    color: #f3963f;
+}
+.g{
+    color: #18c11b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+.right { background-color: #fdd; }
+.left { background-color: #dfd; }
+.down { background-color: #ddf; }
+.up { background-color: #ffd; }
+
+
+.top_p1{
+    display: block;
+    margin: 2% 2% 5% 80%;
+    font-size: 1.3em;
+    white-space: nowrap;
+}
+a:link{
+    color: #f18140;/*未訪問*/
+}
+a:visited{
+    color: #7f5339;/*訪問済み*/
+}
+
+@media(max-width: 800px){
+    .mein{
+        display: block;
+    }
+    .js{
+        width: 100%;
+    }
+    .ko-do{
+        width: 100%;
+    }
+    .top_p1{
+        display: block;
+        margin: 10% 0 0 65%;
+    }
+}
