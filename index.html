@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ぽーとふぉりお</title>
+</head>
+<body class="zen-kurenaido-regular">
+    <div class="top">
+        <header>
+            <a href="#">
+                <img class="omazinai" src="img/icon2.gif" alt="アイコン">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">ほーむ</a></li>
+                    <li><a href="portfolio2025/the work/the work.html">さくひん</a></li>
+                    <li><a href="portfolio2025/note/index.html">のーと</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <p class="title">岡田 茉朋花<br>ポートフォリオ</p>
+    </div>
+    <div class="career">
+        <div>
+            <dl class="link">
+                <dt><h2>なまえ</h2></dt>
+                <dd><ruby>岡田茉朋花<rt>おかだまどか</rt></ruby></dd>
+
+                <dt><h2>しゅみ</h2></dt>
+                <dd>イラスト・ゲーム</dd>
+
+                <dt><h2>がっこう</h2></dt>
+                <dd>千葉医療秘書&IT専門学校</dd>
+
+                <dt><h2>がっか</h2></dt>
+                <dd>WEBデザイン IT科</dd>
+
+                <dt><h2>め₋る</h2></dt>
+                <dd>veb01-wi240007@sankogakuen.jp</dd>
+            </dl>
+        </div>
+        <div>
+            <dl>
+                <dt><h2>すきる</h2></dt>
+                <dd class="skill">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>illustrator</li>
+                        <li>Photoshop</li>
+                        <li>Premiere Pro</li>
+                        <li>After Effects</li>
+                    </ul>
+                    <ul>
+                        <li>･･･★★☆</li>
+                        <li>･･･★★☆</li>
+                        <li>･･･★★★</li>
+                        <li>･･･★★☆</li>
+                        <li>･･･★★☆</li>
+                        <li>･･･★★☆</li>
+                    </ul>
+                </dd>
+
+                <dt><h2>しかく</h2></dt>
+                <dd>
+                    <ul>
+                        <li>文部科学省後援 色彩検定３級</li> 
+                        <li>ビジネス能力試験 B検 ジョブパス</li>
+                        <li>Illustratorクリエイター<br>能力認定試験 スタンダード</li>
+                        <li>webクリエイター能力認定試験<br>HTML5エキスパート</li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <footer>
+        <main>
+            <h2>作品</h2>
+            <div class="cover">
+                <div class="scroll-container">
+                    <div class="scroll-content">
+                        <img class="item omazinai" src="./img/1x/cap (1).png" alt="カップ麺">
+                        <img class="item omazinai" src="./img/1x/tea (1).png" alt="">
+                        <img class="item omazinai" src="./img/1x/hand_cream (1).png" alt="">
+                    </div>
+                    <div class="arrow-left">&#10094;</div> <!-- 左矢印 -->
+                    <div class="arrow-right">&#10095;</div> <!-- 右矢印 -->
+                </div>
+            </div>
+        </main>
+    
+        <p>&copy;2025</p>
+    </footer>
+    <script>
+
+        window.addEventListener('scroll', function () {
+        const careers = document.querySelectorAll('.career');
+        const windowHeight = window.innerHeight;
+        const triggerOffset = 200;
+
+        careers.forEach(function (career) {
+            const rect = career.getBoundingClientRect();
+
+            if (rect.top < windowHeight - triggerOffset && rect.bottom > 0) {
+            career.classList.add('visible');  // 画面に入ったら出現アニメーション
+            career.classList.remove('invisible'); // 画面に入ったら消えるアニメーションを削除
+            } else {
+            career.classList.add('invisible'); // 画面外に出たら消えるアニメーション
+            career.classList.remove('visible'); // 画面外に出たら出現アニメーションを削除
+            }
+        });
+        });
+
+
+
+        const scrollContainer = document.querySelector('.scroll-container');
+        const scrollContent = document.querySelector('.scroll-content');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const arrowRight = document.querySelector('.arrow-right');
+        const itemWidth = 410; // アイテムの幅
+        let currentIndex = 0; // いま表示してるアイテムの番号
+        
+        arrowLeft.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + 4) % 4; // 3個アイテムがある前提
+          updateScroll();
+        });
+        
+        arrowRight.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % 4;
+          updateScroll();
+        });
+        
+        function updateScroll() {
+          scrollContainer.scrollLeft = itemWidth * currentIndex;
+        }
+    </script>
+</body>
+</html>

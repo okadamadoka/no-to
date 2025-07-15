@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a:link{
+    color: #f18140;/*未訪問*/
+}
+a:visited{
+    color: #7f5339;/*訪問済み*/
+}
+.zen-kurenaido-regular {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.omazinai{
+    -webkit-user-drag: none; /* Chrome, Edge */
+    user-select: none;       /* テキスト選択も禁止 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: auto;    /* クリックなどは可能にしておく場合 */
+}
+
+.career {
+    opacity: 0;
+}
+.career.visible {
+    animation: fadeInUp 0.8s ease-out forwards; /* 0.8秒のアニメーション */
+}
+.career.invisible {
+  animation: fadeOut 0.8s ease-out forwards; /* 消えるときのアニメーション */
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* 初めは下にずれている */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px); /* 途中で少し上に移動 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* 最後に元の位置に戻る */
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0); /* 現在の位置 */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px); /* 下にズレて消える */
+  }
+}
+
+html{
+    overflow: auto;
+}
+body{
+    overflow: hidden;
+    background: rgb(255, 252, 231);
+}
+header,header ul{
+    display: flex;
+    justify-content: space-between;
+}
+.skill{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.career,.linkbox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+.career{
+    justify-content: center;
+    background-color: rgb(255, 253, 248);
+    width: 70vw;
+    padding: 2em 0;
+    box-shadow: #afafaf 5px 5px 10px;
+    margin: 0 auto 10vw;
+}
+.linkbox{
+    justify-content: space-around;
+}
+header{
+    padding: 2em;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 5px 0px rgba(203, 158, 103, 0.3);
+    background-color: rgba(255, 252, 231, .9);
+}
+.top img{
+    width: 15%;
+}
+ul{
+    list-style-type: none;
+    margin-top: 30px;
+}
+li{
+    margin: 0 20px;
+}
+header a{
+    font-size: 1.4em;
+    text-decoration: none;
+    color: #ca9d66;
+}
+.title{
+    text-align: center;
+    margin-top: 5em;
+    font-size: 3em;
+}
+h2{
+    margin-top: 2%;
+    text-align: center;
+}
+.top{
+    height: 100vh;
+    background-image: url(img/icon.gif);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center 70%;
+    background-color: rgba(255, 252, 231, .65);
+    background-blend-mode: lighten;
+}
+footer{
+    text-align: center;
+    margin: 3% auto 0;
+    background-color: rgba(239, 236, 214, .5);
+}
+/*---スクロール---*/
+.scroll-container {
+    width: 100%;           /* 親コンテナの幅 */
+    overflow-x: scroll;    /* 横スクロールを有効にする */
+    white-space: nowrap;   /* 中身を横並びにする */
+    scroll-behavior: smooth;
+    scrollbar-width: none;         /* Firefoxで非表示 */
+    -ms-overflow-style: none;      /* IEで非表示 */
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;                 /* Chrome, Safariで非表示 */
+}
+
+.scroll-content {
+    display: inline-block; /* 子要素を横並びにする */
+    /*white-space: nowrap;    子要素の折り返しを防ぐ */
+    padding: 0 36.5%;
+}
+.cover{
+    position: relative;
+}
+.item {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    background-color: rgb(255, 253, 242);
+    object-fit: contain;
+    margin: 5px;
+    text-align: center;
+    line-height: 150px;
+    border-radius: 20px;
+    padding: 20px 0;
+
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.200);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    user-select: none;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+/*---のーと---*/
+.link{
+    display: block;
+    text-align: center;
+}
+.link li{
+    margin: 3% auto;
+}
+/*---自己紹介---*/
+.career,.linkbox{
+    text-align: center;
+    font-size: 1.4em;
+}
+.link dd{
+    margin-bottom: 10%;
+}
