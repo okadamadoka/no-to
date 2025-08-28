@@ -61,7 +61,6 @@ html{
     overflow: auto;
 }
 body{
-    overflow: hidden;
     background: rgb(255, 252, 231);
 }
 header,header ul{
@@ -159,13 +158,14 @@ footer{
     display: inline-block;
     width: 400px;
     height: 400px;
-    background-color: rgb(255, 253, 242);
+    background-color: rgba(255, 242, 192, 0.7);
     object-fit: contain;
     margin: 5px;
     text-align: center;
     line-height: 150px;
     border-radius: 20px;
     padding: 20px 0;
+    box-shadow: 3px 3px 3px rgba(202, 157, 102,0.7);
 
 }
 
@@ -205,4 +205,56 @@ footer{
 }
 .link dd{
     margin-bottom: 10%;
+}
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+     header{
+        display: block;
+        padding: 2em 2%;
+    }
+    header img{
+        padding-left: 5%;
+    }
+    .scroll-content{
+        padding: 0 22%;
+    }
+    .career{
+        display: block;
+        width: 90vw;
+    }
+    .top{
+        height: 110vh;
+    }
+    .linkbox{
+        display: block;
+    }
+    h2{
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    header{
+        display: block;
+        padding: 2em 2%;
+    }
+    header img{
+        padding-left: 5%;
+    }
+    .scroll-content{
+        padding: 0 1%;
+    }
+    .career{
+        display: block;
+        width: 90vw;
+    }
+    .top{
+        height: 110vh;
+    }
+    .linkbox{
+        display: block;
+    }
+    h2{
+        margin-top: 5%;
+    }
 }
