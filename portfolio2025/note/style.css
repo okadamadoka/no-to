@@ -1,0 +1,10 @@
+@media screen and (max-width: 959px) {
+    .top{
+            height: 180vh!important;;
+        }
+}
+@media screen and (max-width: 480px) {
+    .top{
+            height: 150vh!important;;
+        }
+}
