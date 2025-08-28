@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="../../img/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
     <title>ぽーとふぉりお</title>
 </head>
 <body class="zen-kurenaido-regular">
@@ -22,10 +23,35 @@
                 </ul>
             </nav>
         </header>
-        <h2>
-            作品一覧
-        </h2>
+        <main>
+            <h2>作品一覧</h2>
+            <div class="cover">
+                <div class="scroll-container">
+                    <div class="scroll-content">
+                        <img class="item omazinai" src="../../img/1x/tea-1.png" alt="びわちゃのデザイン">
+                        <img class="item omazinai" src="../../img/1x/hand_cream-1.png" alt="ハンドクリームポスター">
+                        <img class="item omazinai" src="../../img/1x/tournament-1.png" alt="学校の大会ポスター">
+                    </div>
+                    <div class="arrow-left">&#10094;</div> <!-- 左矢印 -->
+                    <div class="arrow-right">&#10095;</div> <!-- 右矢印 -->
+                </div>
+            </div>
+        </main>
     </div>
+
+    <div class="grid">
+        <div class="modal">
+        <div class="modal-content">
+            <div class="modal-images"></div>
+            <p class="modal-desc"></p>
+        </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy;2025</p>
     </footer>
+    <script src="grid.js"></script>
+    <script src="../../sakuhin.js"></script>
+</body>
+</html>
