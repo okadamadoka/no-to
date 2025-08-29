@@ -53,3 +53,10 @@
 .item{
     width: 400px!important;
 }
+
+@media screen and (max-width: 480px) {
+  /* 480px以下に適用されるCSS（スマホ用） */
+  .grid{
+    margin: 0;
+  }
+}
